@@ -211,15 +211,14 @@ input[type="text"] {
   text-align: left; }
 
 .mc.column .mobile .answer-label {
-  max-width: 49%; }
+  width: 49%; }
 .mc.column .desktop .answer-label {
-  max-width: 24%; }
+  width: 24%; }
 
 .mc.column .answer-row {
   text-align: center;
   font-size: 0; }
 .mc.column .answer-label {
-  width: 100%;
   font-size: 12pt;
   display: inline-block;
   margin-bottom: 8px;

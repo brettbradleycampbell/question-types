@@ -9,10 +9,10 @@
 .mc.column {
 
 	.mobile .answer-label {
-		max-width: 49%; // -- a mobile and desktop one
+		width: 49%; // -- a mobile and desktop one
 	}
 	.desktop .answer-label {
-		max-width: 24%;
+		width: 24%;
 	}
 
 }
@@ -27,7 +27,6 @@
 	}
 
 	.answer-label {
-		width: 100%;
 		font-size: $answer-font-size;
 		display: inline-block;
 	    margin-bottom: $answer-margin;
