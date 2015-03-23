@@ -153,6 +153,8 @@ input[type="text"] {
   display: table-cell;
   text-align: center;
   vertical-align: middle; }
+.q-matrix.profile .desktop .spacer {
+  display: table-cell; }
 .q-matrix.profile .desktop .q-row {
   border-spacing: 0px 8px; }
 
