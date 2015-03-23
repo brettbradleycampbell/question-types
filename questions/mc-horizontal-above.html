@@ -1,0 +1,61 @@
+<head>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+  <link rel="stylesheet" href="../basestyles/stylesheet.css">
+
+  <script src="../mobile.js"></script>
+
+</head>
+
+<a href="../index.html" class="back-button"> < back</a>
+
+<style>
+
+</style>
+
+<!--QUESTION - MULITPLE CHOICE: TEXT ABOVE -->
+<div id="QID1" class="mc horizontal above">
+
+    <div class="question-body desktop">
+        <p>
+            MC - Horizontal - Side
+        </p>
+        <div class="answer-row">
+
+            <label for="QID1-1" class="answer-label">
+                <div class="answer">Answer Choice Number 1. </div>
+                <!-- OK to put input inside label >>  http://www.w3.org/TR/html401/interact/forms.html#edef-LABEL-->
+                <input type="checkbox" id="QID1-1">
+                <span class="q-checkbox"></span>
+            </label>
+
+            <div class="spacer"></div>
+            
+            <label for="QID1-2" class="answer-label">
+                <div class="answer">Answer Choice Number 2.  This one is a bit longer, but it wraps just fine. </div>
+                <input type="checkbox" id="QID1-2">
+                <span class="q-checkbox"></span>
+            </label>
+            
+            <div class="spacer"></div>
+            
+            <label for="QID1-3" class="answer-label">
+                <div class="answer">Other</div>
+                <input class="other-text text-box" type="text" id="QID1-3-TEXT">
+                <input type="checkbox" id="QID1-3">
+                <span class="q-checkbox"></span>
+            </label>
+
+            <div class="spacer"></div>
+
+            <label for="QID1-4" class="answer-label other-text-placeholder">
+                <input class="other-text text-box placeholder" type="text"placeholder="Other (Placeholder)" id="QID1-4-TEXT">
+                <input type="checkbox" id="QID1-4">
+                <span class="q-checkbox"></span>
+            </label>
+            
+        </div>
+
+    </div> <!-- question-body -->
+
+</div> <!-- QID1 -->

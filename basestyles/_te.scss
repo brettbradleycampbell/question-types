@@ -1,0 +1,22 @@
+// BaseStyles partial for Matrix questions
+.te {
+	.text-box {
+		width: 100%;
+	}
+	.field-container {
+		margin-bottom: $answer-margin * 2; 
+	}
+
+	.left {
+		.field-container {
+			display: table;
+			width: 100%;
+			
+			div { // the class name is .left right now.   What's good class names for these? 
+				display: table-cell;
+			}
+		}
+	}
+
+}
+

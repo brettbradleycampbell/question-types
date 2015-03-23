@@ -1,0 +1,205 @@
+
+<head>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+  <link rel="stylesheet" href="../basestyles/stylesheet.css">
+
+  <script src="../mobile.js"></script>
+
+</head>
+
+<a href="../index.html" class="back-button"> < back</a>
+
+<style>
+
+</style>
+
+<!--QUESTION -->
+<div id="QID1" class="q-matrix cs">
+
+
+  <div class="question-body desktop">
+
+      <div class="q-row top desktop">
+          <div class="statement-container">
+              <span class="statement">&nbsp;</span>
+          </div>
+
+          <div class="scale-container">
+
+          <ul class="scale">
+            <li>
+                <span class="">
+                    <label>Women</label>
+                </span>
+            </li>
+            <li>
+                <span class="">
+                    <label>Men</label>
+                </span>
+            </li>
+            <li>
+                <span class="">
+                    <label>Total</label>
+                </span>
+            </li>                
+          </ul>
+
+        </div>
+
+      </div> <!-- q-row --> 
+      
+
+
+      <div class="q-row">
+          <div class="statement-container">
+              <span class="statement">First Statement - Text Above</span>
+          </div>
+
+          <div class="scale-container">
+
+
+            <ul class="scale">
+              <li style="">
+
+                <div class="field-container">
+                  <div>
+                    <label for="QID1-1-1" class="mobile">
+                      Women
+                    </label>
+                  </div>
+                  <div>
+                    <input id="QID1-1-1" type="text" class="text-box">
+                  </div>
+                  <label class="off-screen">First Statement - Women</label>
+
+                </div>
+
+              </li>
+              <li style="">
+
+                <div class="field-container">
+                  <div>
+                    <label for="QID1-1-2" class="mobile">
+                      Men
+                    </label>
+                  </div>
+                  <div>
+                    <input id="QID1-1-2" type="text" class="text-box">
+                  </div>
+                  <label class="off-screen">First Statement - Men</label>
+
+                </div>
+
+              </li>
+              <li style="">
+
+                <div class="field-container">
+                  <div>
+                    <label for="QID1-1-3" class="mobile">
+                      Total
+                    </label>
+                  </div>
+                  <div>
+                    <input id="QID1-1-3" type="text" class="text-box">
+                  </div>
+                  <label class="off-screen">First Statement - Total</label>
+
+                </div>
+
+              </li>
+           
+            </ul>
+
+        </div>
+
+      </div> <!-- q-row --> 
+
+
+      <div class="q-row">
+          <div class="statement-container">
+              <span class="statement">Second Statement - Placeholder</span>
+          </div>
+
+          <div class="scale-container">
+
+
+            <ul class="scale">
+              <li style="">
+
+                <div class="field-container">
+                  <div>
+                    <input id="QID2-1-1" type="text" class="text-box" placeholder="Women">
+                  </div>
+                  <label class="off-screen">Second Statement - Women</label>
+
+                </div>
+
+              </li>
+              <li style="">
+
+                <div class="field-container">
+
+                  <div>
+                    <input id="QID2-1-2" type="text" class="text-box" placeholder="Men">
+                  </div>
+                  <label class="off-screen">Second Statement - Men</label>
+
+                </div>
+
+              </li>
+              <li style="">
+
+                <div class="field-container">
+
+                  <div>
+                    <input id="QID2-1-3" type="text" class="text-box" placeholder="Total">
+                  </div>
+                  <label class="off-screen">Second Statement - Total</label>
+
+                </div>
+
+              </li>
+           
+            </ul>
+
+        </div>
+
+      </div> <!-- q-row --> 
+
+
+  </div> <!-- question-body -->
+
+</div> <!-- QID1 -->
+
+<script>
+
+// Dropdown/accordion functionality
+$(document).ready(function(){
+
+    console.log("matrix");
+
+    // This allows the height to animate to and from '0' and 'auto'.  
+    $('.statement-container').click(function () {
+
+        var el = $(this).siblings('.scale-container'),
+        curHeight = el.height(),
+        autoHeight = el.css('height', 'auto').height(); //temporarily change to auto and get the height.
+        el.height(curHeight).animate({ height: autoHeight === curHeight ? "0px" : autoHeight }, 200, function() {
+            // change height to auto when animation finishes, if it's supposed to be auto and not "0"
+            if (el.height() > 0) {
+                el.css('height', 'auto');             
+            }
+        });
+        // optional - animate the siblings to 0 on click. 
+        var sib = $(this).parent('.q-row').siblings().children('.scale-container');
+        sib.animate({height: "0px"}, 200);
+
+        // change the arrow to X or ^
+
+    });
+
+});
+</script>
+
+

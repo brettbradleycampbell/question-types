@@ -1,0 +1,65 @@
+// Skin StyleSheet
+
+// These variables and conditionals would be set by the Look and Feel editor and the Theme Editor. 
+
+//
+// conditionals
+//
+
+$native-inputs: F;
+$radio-buttons: F;
+
+//
+// variables
+//
+
+// colors
+$primary-color: #ff5050;
+$white: #FFF;
+
+// general
+$light-border: 1px solid #ccc;
+$default-font-size: 14pt;
+
+// answer choices
+$answer-background: #eee;
+$answer-background-hover: darken($answer-background, 10%);
+$answer-border: 1px solid darken($answer-background, 10%);
+$answer-border-hover: 1px solid darken($answer-background, 10%);
+
+$answer-font-size: $default-font-size - 2pt;
+
+$answer-border-radius: 3px;
+$answer-padding: 8px;
+$answer-margin: 8px;
+
+$radio-button-size: 16px;
+$radio-button-background: #fff;
+$radio-button-background-selected: $primary-color;
+$radio-button-border: $light-border;
+$radio-button-border-color-selected: darken($radio-button-background-selected, 10%);
+
+$checkbox-border-radius: 2px;
+
+// ORGANIZE THIS BETTER. !defaults and stuff. 
+@if $radio-buttons == T {
+	$default-answer-padding: 0px;
+	$default-answer-border: none;
+}
+
+// Import BaseStyles (includes partial file for each question type)
+@import "basestyles.scss";
+
+
+// Theme-specific styles
+// these would override BaseStyles, and include additional styles not specified in BaseStyles.  
+
+body {
+	font-family: sans-serif;
+}
+
+// .question-body {
+// 	border: 1px dashed $primary-color; // certain ones will need to be editable by L&F editor/theme editor. 
+// 	padding: 40px;
+// }
+

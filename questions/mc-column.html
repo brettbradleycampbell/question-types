@@ -1,0 +1,151 @@
+
+<head>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+  <link rel="stylesheet" href="../basestyles/stylesheet.css">
+
+  <script src="../mobile.js"></script>
+
+
+
+
+
+
+
+
+        <link rel="stylesheet" href="height/test.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="height/jquery.matchHeight.js"></script>
+        <script type="text/javascript" src="height/test.js"></script>
+        <script type="text/javascript">
+            (function() {
+
+                /* matchHeight example */
+
+                $(function() {
+                    // apply your matchHeight on DOM ready (they will be automatically re-applied on load or resize)
+
+                    // get test settings
+                    var byRow = $('body').hasClass('test-rows');
+
+                    // apply matchHeight to each item container's items
+                    $('.items-container').each(function() {
+                        $(this).children('.item').matchHeight({
+                            byRow: byRow
+                            //property: 'min-height'
+                        });
+                    });
+
+                    // example of removing matchHeight
+                    $('.btn-remove').click(function() {
+                        $('.items-container').each(function() {
+                            $(this).children('.item').matchHeight('remove');
+                        });
+                    });
+
+                    // button to show hidden elements
+                    $('.btn-hidden').click(function() {
+                        $('body').removeClass('test-hidden');
+                    });
+
+                    // example of update callbacks (uncomment to test)
+                    $.fn.matchHeight._beforeUpdate = function(event, groups) {
+                        //var eventType = event ? event.type + ' event, ' : '';
+                        //console.log("beforeUpdate, " + eventType + groups.length + " groups");
+                    }
+
+                    $.fn.matchHeight._afterUpdate = function(event, groups) {
+                        //var eventType = event ? event.type + ' event, ' : '';
+                        //console.log("afterUpdate, " + eventType + groups.length + " groups");
+                    }
+
+                });
+
+
+            })();
+
+
+        </script>
+
+
+
+
+</head>
+
+<a href="../index.html" class="back-button"> < back</a>
+
+<style>
+
+
+
+
+
+</style>
+
+
+<!--QUESTION - MC Column -->
+<div id="QID1" class="mc column">
+
+    <p>Inline-block option. Need JS to make divs same height.  </p>
+
+    <div class="question-body desktop">
+
+        <div class="answer-row">
+
+            <label for="QID1-1" class="answer-label">
+                <input type="checkbox" id="QID1">
+                <span class="q-checkbox"></span>
+                <div class="answer">Answer Choice Number 1. </div>
+            </label>
+
+            <label for="QID1-2" class="answer-label">
+                <input type="checkbox" id="QID1-2">
+                <span class="q-checkbox"></span>
+                <div class="answer">Answer Choice Number 1. </div>
+            </label>
+
+            <label for="QID1-3" class="answer-label">
+                <input type="checkbox" id="QID1-3">
+                <span class="q-checkbox"></span>
+                <div class="answer">Answer Choice Number 1. </div>
+            </label>
+
+            <label for="QID1-3" class="answer-label">
+                <input type="checkbox" id="QID1-3">
+                <span class="q-checkbox"></span>
+                <div class="answer">Answer Choice Number 1. </div>
+            </label>                        
+
+        </div>
+
+    </div> <!-- question-body -->
+
+</div> <!-- QID1 -->
+
+            <p>Float option</p>
+            <a target="_blank" href="http://brm.io/jquery-match-height-demo/">The below is a test implementation of this </a>
+
+            <div class="items-container">
+                <div class="item item-0 answer-label">
+                    <div id="heightTest" style="display: table; text-align: center; width: 100%;">
+                        <p style="display: table-cell; vertical-align: middle;">Same Height and vertically aligned! -- only if add height: 100% to the 'table', but then it screws up the height of everything.  Need to add height 100% after height is calculated or something. </p>
+                    </div>
+                </div>
+                <div class="item item-1 answer-label">
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Aenean semper felis ipsum, vulputate</p>
+                </div>
+                <div class="item item-2 answer-label">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p>Aenean semper felis ipsum, vulputate consequat dui elementum vel. Nullam odio eros, sagittis vitae lectus id, pretium viverra lectus. Etiam auctor dolor non dui ultricies pulvinar.</p>
+                </div>
+
+                <div class="item item-3 answer-label">
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Aenean semper.</p>
+                </div>
+
+
+                </div>
+            </div>
+

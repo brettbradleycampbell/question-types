@@ -1,0 +1,165 @@
+// CSS that should be dynamically set by JS -- or should it?  maybe we should have classes for widths..?
+.mc.horizontal .desktop .spacer {width: 1%;} 
+.mc.horizontal .desktop .answer-label {width: 24.25%}
+
+
+
+// BaseStyles partial for MC Horizontal questions
+
+// BaseStyles: 
+// Include the bare bones to make it display correctly (display:table; )
+// Also need to include styles with variables (defined in each theme stylesheet). 
+
+.mc.horizontal {
+
+    //
+    // Include .desktop and .mobile views
+    //
+
+    // display answers as horizontal table on desktop
+    .desktop  {
+        .answer-row {
+            display: table; // or table-row?
+            width: 100%;
+        }
+        // .spacer adds vertical space between 'table element' answers
+        // gives the benefit of using display:table for uniform height, but allows spacing between the answers without using border-spacing (which applies to both left and right indiscriminately)
+        .spacer {
+            display: table-cell;
+        }
+
+        .answer-label {
+            display: table-cell;
+        }
+    }
+
+    // display answers as block elements on mobile
+    .mobile  {
+        .answer-row {
+            display: block;
+        }
+        .spacer {
+            display: none;
+        }
+        .answer-label {
+            display: block;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    }
+
+    //
+    // Raido Button positioning
+    //
+
+    @if $radio-buttons == T {
+
+        // text above radio button
+        &.above {
+            .answer-label {
+                vertical-align: bottom;
+                text-align: center;
+            }
+            .other-text {
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+        }
+
+        // text to side of radio button
+        &.side {
+            .answer {
+                display: inline-block;
+                max-width: 80%;
+                vertical-align: top;
+                margin: 0;
+            }
+            .answer-label {
+                text-align: left;
+                vertical-align: top;
+            }
+            .other-text {
+                display: inline-block;
+                max-width: 100%;
+                &.placeholder {
+                    max-width: 80%;
+                }
+            }
+        }
+
+    }
+
+
+    //
+    // Inherit theme styles and colors
+    //
+
+    @if $radio-buttons == F {
+
+        .q-radio,
+        .q-checkbox {
+            display: none;
+        }
+
+        .answer-row {
+            table-layout: fixed;
+        }
+
+        .answer-label.other-text-placeholder {
+            padding: 0;
+        }
+
+        .other-text {
+            font-size: inherit;
+            font-family: inherit;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .mobile .other-text-placeholder .other-text {
+            padding: $answer-padding;
+        }
+
+        .desktop .other-text-placeholder .other-text {
+            height: 100%;
+        }
+
+        .answer-label {
+            vertical-align: middle;
+            margin-bottom: $answer-margin;
+        }
+
+
+        .other-text-placeholder .other-text {
+            width: 100%;
+            border: none;
+            padding: 0 $answer-padding;
+        }
+
+        .mobile .answer-label {
+            text-align: left;
+        }
+
+        .mobile .other-text {
+            display: inline-block;
+            margin: 0;
+            text-align: left;
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

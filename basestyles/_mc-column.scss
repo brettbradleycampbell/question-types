@@ -1,0 +1,38 @@
+// Uniform label height, Kyle's JS
+
+// Allow user to set column size: 
+
+// two ways of doing this: 
+// set a percentage
+// set a static max-width.  
+
+.mc.column {
+
+	.mobile .answer-label {
+		max-width: 49%; // -- a mobile and desktop one
+	}
+	.desktop .answer-label {
+		max-width: 24%;
+	}
+
+}
+
+// BaseStyles partial for MC Horizontal questions
+
+.mc.column {
+
+	.answer-row {
+		text-align: center;
+		font-size: 0;
+	}
+
+	.answer-label {
+		width: 100%;
+		font-size: $answer-font-size;
+		display: inline-block;
+	    margin-bottom: $answer-margin;
+	    // margin-right: $answer-margin / 2;
+	    // margin-left: $answer-margin / 2;
+	    box-sizing: border-box;
+	}
+}

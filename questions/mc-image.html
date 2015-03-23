@@ -1,0 +1,222 @@
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+
+<script>
+
+$(document).ready(function(){
+	$('.answerblock .image-holder').css("opacity", "0");
+});
+
+$(window).load(function(){
+
+	$('.answerblock .image-holder').each(function() {
+		var imageWidth = $(this).children("img").width();
+		var holderWidth = $(this).width();
+		var left = (imageWidth - holderWidth) / 2 * -1;
+
+		var imageHeight = $(this).children("img").height();
+		var holderHeight = $(this).height();
+		var top = (imageHeight - holderHeight) / 2 * -1;
+
+		$(this).children("img").css("left", left);
+		$(this).children("img").css("top", top);
+	
+		// Fade in images once they've loaded and positioned. 
+		$(".answerblock .image-holder" ).animate({ opacity: 1}, 1500, function() {});
+
+	});
+
+});
+
+</script>
+
+
+<div class="answerblockrow circle" style="text-align: center;">
+    <div class="answerblock">
+        <div class="image-holder">
+        	<img src="http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/4/11/1397210130748/Spring-Lamb.-Image-shot-2-011.jpg">
+        </div>
+        <span>Yes</span> 
+    </div>
+    <div class="answerblock">
+        <div class="image-holder">
+        	<img src="http://www.causingeffect.com/images/made/images/example/cow_square_200_200_int.jpg">
+        </div>
+        <span>Cow</span> 
+    </div>
+    <div class="answerblock">
+        <div class="image-holder">
+        	<img src="https://www.google.com/images/srpr/logo11w.png">
+        </div>
+        <span>How do we fit an image like this better? </span> 
+    </div>
+    <div class="answerblock">
+        <div id="test" class="image-holder">
+        	<img src="http://www.causingeffect.com/images/made/images/example/cow_square_200_200_int.jpg">
+        </div>
+        <span>Last</span> 
+    </div>
+</div>
+
+
+<style>
+
+/* user sets the width of the .answerblock and the height of the .image-holder
+so these are uniform for each item in the question.   */
+
+.image-holder {
+/*	background: blue;
+*/	width: 100%;
+	height: 200px;
+	overflow: hidden;
+    position: relative; /* for the position absolute of the cropped image option */
+    border-radius: 2px;
+}
+
+.answerblockrow.circle .image-holder {
+	border-radius: 100%;
+}
+.answerblockrow.circle {
+	text
+}
+
+.image-holder img {
+	max-width: 100%;
+/*	max-height: 150px;*/
+}
+
+/* OR, like this */
+/* a "crop" option */
+/* the alternative to this option is what they can already do.  drop an image in the answer choice. so this isn't an option, this is how the question type works.  */
+.image-holder img {
+	max-width: none;
+	max-height: 200px;
+	left: 0px;  /*calculate with JS half the width of the leftovers on each image, so it centers it */
+	position: absolute;
+}
+
+
+/* Free flowing column layout - inline-block */
+.answerblockrow {
+    text-align: center;
+}
+.answerblock {
+    display: inline-block;
+    width: 100%;
+    max-width: 220px; /* user sets this */
+/*    background: #fafafa;
+    border: 1px solid #ddd;*/
+    color: #333;  
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 6px 3px;
+    cursor: pointer;
+}
+.answerblock span {
+	margin-top: 10px;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.answerblockrow.small .answerblock {
+    max-width: 100px;
+}
+
+
+
+body {
+    font-family: sans-serif;
+}
+input[type="radio"] {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+/* add space between "td"s */
+/* using border-spacing is horrible because you can't do left-right differences*/
+.spacer {
+    display: table-cell;
+    width: 2%;
+}
+.answerrow.mobile {
+    display: block;
+}
+.answerrow.mobile .labeltd {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 100%;
+}
+/* the label and the td are the same */
+.labeltd {
+    border: 1px solid #eee;
+    display: table-cell;
+    vertical-align: bottom;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    
+    width: 32%;
+}
+.noradio .labeltd {
+    vertical-align: middle;
+    background: #7CB4FF;
+    border-color: #478AE4;
+    color: #fff;
+}
+.noradio .labeltd:hover {
+    background: #6BA3EE;
+}
+
+.answerrow {
+    display: table; /* or table-row? */
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+
+/* OLD first attempt */
+.answerrow.three .answertd {
+    width: 33.3333333333%;
+}
+.answerrow.four .answertd {
+    width: 25%;
+    /* testing full height */
+/*     background: ;
+    height: 200px; */
+}
+.answertd {
+    border:1px solid #cccccc; 
+    display: table-cell; 
+    vertical-align: middle;
+    text-align: center;
+    
+    padding: 10px;
+}
+.answerlabel {
+    background: #aaa;
+    padding: 20px 5px;
+    border-radius: 4px;
+/*     margin: 4px 2px; */
+
+    /* testing full height */
+/*     display: table;
+    width: 100%;
+    height: 100%; */
+}
+.answertd.first {
+    padding-left: 0;
+}
+.answertd.last {
+    padding-right: 0;
+}
+
+
+
+
+</style>

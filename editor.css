@@ -1,0 +1,23 @@
+body {
+	font-family: sans-serif;
+}
+
+.question-list ul {
+	padding: 0 8px;
+	list-style: none;
+	font-size: 14pt;
+	line-height: 18pt;
+}
+
+.question-list a {
+	text-decoration: none;
+	color: #ff5050;
+}
+
+.question-list a:hover {
+	color: #629dff;
+}
+
+.question-list h1 {
+	font-size: 14pt;
+}

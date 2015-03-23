@@ -1,0 +1,48 @@
+
+
+
+/* test items */
+
+
+
+#heightTest {
+/*    background: blue !important;*/
+}
+
+.item {
+/*    display: block;*/
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+/*    background: #00A0B0;*/
+}
+
+
+.items-container.big-items .item {
+    width: 50%;
+}
+
+/* test margins */
+
+.test-margin .item {
+    margin: 1%;
+}
+
+
+/* test responsive */
+
+@media only screen and (max-width: 1024px) {
+    .item,
+    .items-container.big-items .item {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .test-margin .item,
+    .test-margin .items-container.big-items .item {
+        width: 99%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

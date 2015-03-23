@@ -1,0 +1,41 @@
+<head>
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<!-- allow user another "full-width" or "not" option.  Maybe a checkbox. Change "with text" to "show percentage" and "verbose text" to "show text" or something?  Drop in the full-width or text-below markup depending on choice, and include css for both. ? -->
+
+<div id="progress-bar" class="full-width">
+	<div role="widget">
+
+		<div class="progress-bar-container">
+			<div id="progress1" class="progress-bar-fill">
+				<span class="progress-text">55%</span>
+			</div>
+			<span class="verbose-text" >Survey Completion</span>
+		</div>
+
+	</div>
+</div>
+
+<br><br>
+
+<div id="progress-bar" class="text-below">
+	<div role="widget">
+
+		<div class="progress-bar-container">
+			<div id="progress2" class="progress-bar-fill">
+			</div>
+		</div>
+		<div class="group">
+			<span class="progress-text">38%</span>
+			<span class="verbose-text">Survey Progress</span>
+		</div>
+
+	</div>
+</div>
+
+<script>
+document.getElementById("progress1").style.width = "55%";
+document.getElementById("progress2").style.width = "38%";
+
+</script>
