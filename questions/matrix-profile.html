@@ -4,7 +4,7 @@
 
   <link rel="stylesheet" href="../basestyles/stylesheet.css">
 
-  <script src="../mobile.js"></script>
+  <!--<script src="../mobile.js"></script>-->
 
 </head>
 
@@ -14,6 +14,7 @@
 
 </style>
 
+<body>
 <!--QUESTION -->
 <div id="QID1" class="q-matrix profile">
 
@@ -158,34 +159,36 @@
 
 </div> <!-- QID1 -->
 
+</body>
+
 <script>
 
-// Dropdown/accordion functionality
-$(document).ready(function(){
+// // Dropdown/accordion functionality
+// $(document).ready(function(){
 
-    console.log("matrix");
+//     console.log("matrix");
 
-    // This allows the height to animate to and from '0' and 'auto'.  
-    $('.statement-container').click(function () {
+//     // This allows the height to animate to and from '0' and 'auto'.  
+//     $('.statement-container').click(function () {
 
-        var el = $(this).siblings('.scale-container'),
-        curHeight = el.height(),
-        autoHeight = el.css('height', 'auto').height(); //temporarily change to auto and get the height.
-        el.height(curHeight).animate({ height: autoHeight === curHeight ? "0px" : autoHeight }, 200, function() {
-            // change height to auto when animation finishes, if it's supposed to be auto and not "0"
-            if (el.height() > 0) {
-                el.css('height', 'auto');             
-            }
-        });
-        // optional - animate the siblings to 0 on click. 
-        var sib = $(this).parent('.q-row').siblings().children('.scale-container');
-        sib.animate({height: "0px"}, 200);
+//         var el = $(this).siblings('.scale-container'),
+//         curHeight = el.height(),
+//         autoHeight = el.css('height', 'auto').height(); //temporarily change to auto and get the height.
+//         el.height(curHeight).animate({ height: autoHeight === curHeight ? "0px" : autoHeight }, 200, function() {
+//             // change height to auto when animation finishes, if it's supposed to be auto and not "0"
+//             if (el.height() > 0) {
+//                 el.css('height', 'auto');             
+//             }
+//         });
+//         // optional - animate the siblings to 0 on click. 
+//         var sib = $(this).parent('.q-row').siblings().children('.scale-container');
+//         sib.animate({height: "0px"}, 200);
 
-        // change the arrow to X or ^
+//         // change the arrow to X or ^
 
-    });
+//     });
 
-});
+// });
 </script>
 
 
