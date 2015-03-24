@@ -3,7 +3,7 @@
 $(window).on("load resize", function(){
 
   // console.log( $(this).width() );
-  if ($(this).width() < 700) {
+  if ($(this).width() < 500) {
     $('.question-body').removeClass("desktop");
     $('.question-body').addClass("mobile");
   } else {
