@@ -1,0 +1,92 @@
+// BaseStyles for PGR
+
+.PGR {
+
+	.QuestionBody {
+		-webkit-user-select: none;
+	}
+
+	table.ChoiceStructure {
+		width: 100%;
+	}
+
+	ul li {
+		padding: $answer-padding;
+		border: $light-border;
+		margin: $answer-margin;
+		border-radius: $answer-border-radius;
+		background: #fff;
+		cursor: move;
+		span, label {
+			cursor: move; 
+		}
+
+	}
+
+	.itemsContainerTd {
+		// min-width: 100px;
+		// min-height: 100px;
+		ul {
+			margin: $answer-margin;
+			border: $light-border;
+			padding-bottom: $answer-padding * 2;
+			.rank {
+				display: none;
+			}
+		}
+	}	
+
+	.groupsContainerTd {
+
+		ul {
+			-webkit-transition: .3s padding;
+			min-height: 40px;
+			li {
+
+				span.rank {
+					display: inline-block;
+					background: $primary-color;
+					color: $reverse-primary-color; 
+					padding: 2px $answer-padding;
+					border-radius: 10px;
+				}
+			}
+		}
+		.Group {
+			border: $light-border;
+			margin-bottom: $answer-margin;
+			border-radius: $answer-border-radius;
+			h2 {
+				text-align: center;
+				border-bottom: $light-border;
+			}
+		}
+	}
+
+
+	.Group.Columns {
+		// needed to make these 'columns'
+		// display: inline-block;
+		float: left;
+		width: 100%;
+		max-width: 250px;
+	}
+	.Columns .itemsContainerTd ul {
+		max-width: 250px;
+		margin: 0 auto;
+	}
+
+	.itemsContainerTd,
+	.groupsContainerTd {
+
+		width: 50%;
+		vertical-align: top;
+
+		h2 {
+			font-weight: normal;
+			font-size: inherit;
+			margin: 0;
+			padding: $answer-padding;
+		}
+	}
+}

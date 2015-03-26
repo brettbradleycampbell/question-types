@@ -76,7 +76,7 @@ input[type="text"] {
     border-color: #aaa;
     box-shadow: inset 1px 1px 5px #ccc; }
 
-.off-screen {
+.off-screen, .offScreen {
   position: absolute;
   left: -9999px;
   height: 1px;
@@ -92,6 +92,11 @@ input[type="text"] {
   .float-group .left {
     float: left;
     width: 50%; }
+
+.PGR ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 .q-matrix .desktop ul.scale li {
   width: 33.333333333%; }
@@ -234,5 +239,61 @@ input[type="text"] {
   .te .left .field-container div {
     display: table-cell; }
 
+.PGR .QuestionBody {
+  -webkit-user-select: none; }
+.PGR table.ChoiceStructure {
+  width: 100%; }
+.PGR ul li {
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin: 8px;
+  border-radius: 3px;
+  background: #fff;
+  cursor: move; }
+  .PGR ul li span, .PGR ul li label {
+    cursor: move; }
+.PGR .itemsContainerTd ul {
+  margin: 8px;
+  border: 1px solid #ccc;
+  padding-bottom: 16px; }
+  .PGR .itemsContainerTd ul .rank {
+    display: none; }
+.PGR .groupsContainerTd ul {
+  -webkit-transition: .3s padding;
+  min-height: 40px; }
+  .PGR .groupsContainerTd ul li span.rank {
+    display: inline-block;
+    background: #ff5050;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 10px; }
+.PGR .groupsContainerTd .Group {
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  border-radius: 3px; }
+  .PGR .groupsContainerTd .Group h2 {
+    text-align: center;
+    border-bottom: 1px solid #ccc; }
+.PGR .Group.Columns {
+  float: left;
+  width: 100%;
+  max-width: 250px; }
+.PGR .Columns .itemsContainerTd ul {
+  max-width: 250px;
+  margin: 0 auto; }
+.PGR .itemsContainerTd,
+.PGR .groupsContainerTd {
+  width: 50%;
+  vertical-align: top; }
+  .PGR .itemsContainerTd h2,
+  .PGR .groupsContainerTd h2 {
+    font-weight: normal;
+    font-size: inherit;
+    margin: 0;
+    padding: 8px; }
+
 body {
   font-family: sans-serif; }
+
+label.q-radio, label.q-checkbox {
+  display: none; }

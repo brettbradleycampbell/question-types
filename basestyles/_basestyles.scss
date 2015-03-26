@@ -1,16 +1,16 @@
-// Styles that apply to more than one question: 
-// (is this a good idea? we'd have to repeat this CSS a lot if we put it in each quesiton partial file)
+// BaseStyles V5
 
-// Things to put in this _basestyles.scss partial file: 
-// Styles that apply to several question types or the survey as a whole. 
+
+// This BaseStyles is for CSS / Sass that applies to several question types or the survey as a whole. 
 // Like how to display radio buttons.  
 
-@if $native-inputs == F {
-    // If native radio buttons are turned off (F), need to hide native radio buttons and style them
 
+
+// If native radio buttons are turned off (F), need to hide native radio buttons and style them
+@if $native-inputs == F {
+
+    // style radio buttons -- in media query, so native radio buttons remain in IE8. 
     @media screen and (min-width: 0) {  
-    // style radio buttons -- in media query, so won't show up in IE8
-    // reason to not style radio buttons in ie8 is that border-radius isn't supported so you can't make circles with just CSS
 
         //////////////////////////////
         ///  STYLED RADIO BUTTONS   //
@@ -136,8 +136,8 @@ input[type="text"] {
 
 
 
-// used in Matrix, used anywhere else?  Is this just for screen readers? 
-.off-screen {
+// used in Matrix.  Is this just for screen readers? 
+.off-screen, .offScreen {
   position: absolute;
   left: -9999px;
   height: 1px;
@@ -162,10 +162,21 @@ input[type="text"] {
 }
 
 
+// Styles ul's 
+
+.PGR {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
 
 
 
 
+
+// Completely unknown.  Do these exist in our surveys anywhere anymore?  
 
 
 
@@ -176,5 +187,6 @@ input[type="text"] {
 @import "mc-horizontal.scss";
 @import "mc-column.scss";
 @import "te.scss";
+@import "pgr.scss";
 
 

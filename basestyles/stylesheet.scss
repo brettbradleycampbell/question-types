@@ -1,6 +1,7 @@
-// Skin StyleSheet
+// Skin StyleSheet (V5)
 
-// These variables and conditionals would be set by the Look and Feel editor and the Theme Editor. 
+
+// These variables and conditionals would eventually be set by the Look and Feel editor and the Theme Editor. 
 
 //
 // conditionals
@@ -15,6 +16,7 @@ $radio-buttons: F;
 
 // colors
 $primary-color: #ff5050;
+$reverse-primary-color: #fff;
 $white: #FFF;
 
 // general
@@ -58,8 +60,7 @@ body {
 	font-family: sans-serif;
 }
 
-// .question-body {
-// 	border: 1px dashed $primary-color; // certain ones will need to be editable by L&F editor/theme editor. 
-// 	padding: 40px;
-// }
+// Just for testing on V4 Skins
+
+label.q-radio, label.q-checkbox {display: none;} //hiding the old styled radio buttons
 
